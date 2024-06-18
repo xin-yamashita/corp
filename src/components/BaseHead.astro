@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
 	title: string;
@@ -18,14 +19,14 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
-<title>XIN inc. │ Innovation Design Firm</title>
-<meta name="description" content="株式会社XIN（サイン）コーポレートサイト。デザインパートナーとして、デザイン経営支援からUI/UXデザインまで、経営とビジネスの旅路に寄り添う伴走者のように、想いと成果にフルコミットでお力になります。">
 
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+
+<ViewTransitions />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
