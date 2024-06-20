@@ -10,11 +10,11 @@
 /*----------------------------------------
  pageTitle
 ----------------------------------------*/
-.pageTitle { margin: 70px 0 20px; padding: 100px 40px 0px;
+.pageTitle { margin: 70px 0 20px; padding: 210px 40px 0px;
   .titleSet { position: relative; width: 100%;
     &:before { content: none; }
     .subTitle { position: relative; display: inline-block; padding: 0 15px; height: 36px; line-height: 36px; background-color: #000; font-size: 20px; font-weight: bold; letter-spacing: $ls_small; color: #fff; z-index: 1; }
-    .title { position: absolute;  display: flex; top: calc(50% + 38px); left: 50%; width: 100vw; height: 250px; overflow: hidden; transform: translate(-50%,-50%); z-index: 0;
+    .title { position: absolute;  display: flex; top: calc(50% -5px); left: 50%; width: 100vw; height: 250px; overflow: hidden; transform: translate(-50%,-50%); z-index: 0;
       .titleImg { width: auto; height: 100%; max-width: inherit; padding-left: 400px;
         &:first-child { animation: loop 50s -25s linear infinite; }
         &:last-child { animation: loop2 50s linear infinite; }

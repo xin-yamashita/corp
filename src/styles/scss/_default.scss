@@ -48,10 +48,15 @@ body { --sb-track-color: #ffffff; --sb-thumb-color: #aaa; --sb-size: 16px; scrol
 	max-width: 1300px;
 	z-index: 1;
 	&.spaceLess { margin-top: 0; }
-	.catchSet {
-		padding-left: 60px;
-    font-size: 20px;
-    letter-spacing: 0.2em;
-    line-height: 2;
+	&.pageTopCopy {
+		.catchUnit {
+			padding-left: 60px;
+		}
 	}
+}
+
+.breadCrumbs {
+	position: absolute;
+	top: 50px;
+	left: 40px;
 }
