@@ -11,7 +11,10 @@
 /*----------------------------------------
  join-us
 ----------------------------------------*/
-.topMessage { display: grid; grid-template-columns: 40% 52%; gap: 8%; }
+.topMessage { display: grid; grid-template-columns: 40% 52%; gap: 8%;
+  background: url(/imageFile/join-us/ogose_bkg.svg) no-repeat left -40px center;
+  .imgCell { display: flex; align-items: center; justify-content: center; width: 100%; }
+}
 
 .md_contentUnit--join {
   &:before { top: calc(100% - 150px); right: inherit; left: 50%; width: 100vw; min-width: 1700px; background-image: url(../../imageFile/join_bg.svg); transform: translate(-50%,-50%); }
@@ -102,3 +105,42 @@
     }
   }
 }
+
+.staffImage {
+  display: grid;
+  gap: 5%;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  &_elem {
+    padding: 40px 0;
+  }
+  &_lead {
+    font-size: clamp(20px,3vw,32px); font-weight: bold; line-height: $lh_small; letter-spacing: $ls_small;
+  }
+  &_dec {
+    margin-top: 1.5em;
+    line-height: $lh_small;
+  }
+}
+
+.storyWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5%;
+  width: 100%;
+}
+.storyUnit {
+  background-color: #FFF;
+  padding: 36px;
+  width: 100%;
+  &_img {
+    width: 100%;
+  }
+  &_title {
+    color: $col_txt;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+}
+

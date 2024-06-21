@@ -62,8 +62,55 @@
   padding: 0 90px;
 }
 
-.serviceUnit {
+.serviceFlow {
   margin: 80px 0 0;
+  padding: 0 90px 200px;
+  position: relative;
+  &_img {
+    width: 100%;
+  }
+  &_elem {
+    position: absolute;
+    top: 60%;
+    width: 40%;
+    &.experience {
+      left: 9.5%;
+    }
+    &.product {
+      right: 9%;
+    }
+  }
+  &_elemTitle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    text-align: center;
+    span {
+      background-color: #000;
+      color: #FFF;
+      letter-spacing: $ls_small;
+      line-height: $lh_medium;
+      padding: 0 10px;
+    }
+  }
+  &_elemRubi {
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    justify-content: center;
+    margin-top: 15px;
+    letter-spacing: $ls_small;
+    text-align: center;
+  }
+  &_elemDec {
+    line-height: $lh_small;
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+
+.serviceUnit {
+  margin: 120px 0 0;
   position: relative;
   &::before {
     content: '';
