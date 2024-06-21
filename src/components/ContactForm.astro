@@ -7,7 +7,7 @@ import '../styles/css/contactForm.css';
 
 <div class={`${cn}`}>
   <form netlify>
-    <input type="hidden" name="email" value="koichiro.yamashita@xin.inc" />
+    
     <dl class={`${cn}Unit`}>
       <dt class={`${cn}Unit_label`}>お問い合わせ種別</dt>
       <dd class={`${cn}Unit_inputArea`}>
@@ -50,7 +50,7 @@ import '../styles/css/contactForm.css';
     <dl class={`${cn}Unit`}>
       <dt class={`${cn}Unit_label`}>電話番号</dt>
       <dd class={`${cn}Unit_inputArea`}>
-        <input type='tel' name='tel' pattern='\d{2,4}-\d{3,4}-\d{3,4}' placeholder='090xxxxxxx' required>
+        <input type='tel' name='tel' placeholder='090xxxxxxx' required>
       </dd>
       <dd class={`${cn}Unit_inputConfirm`} data-area='tel'></dd>
     </dl>
