@@ -3,12 +3,15 @@ import Layout from '../layouts/PageTemplate.astro';
 import BreadCrumbs from '../components/BreadCrumbs.astro';
 import PageTitle from '../components/PageTitle.astro';
 import ContentTitle from '../components/ContentTitle.astro';
+import StoryUnit from '../components/StoryUnit.astro';
 
 import '../styles/css/join-us.css';
+
+import { STORY_LIST } from '../content/Story.js';
 ---
 
 <Layout title="About" description="">
-	<div id="about" class="md_contentUnit">
+	<div id="about" class="md_contentUnit pageWrap">
 		<BreadCrumbs
       pages={[
         {name: 'TOP', url: '/'},
@@ -19,7 +22,8 @@ import '../styles/css/join-us.css';
 		<PageTitle
 				title="運命の出会いかもしれません"
 				subTitle="WORK WITH US"
-				svg="/imageFile/join_title.svg">
+				svg="/imageFile/join_title.svg"
+				panel="/imageFile/join-us/panel_join-us.png">
 				<h2 class="rubi">運命の出会い<br />かもしれません</h2>
 		</PageTitle>
 
@@ -35,14 +39,14 @@ import '../styles/css/join-us.css';
 			<ContentTitle title="TOP MESSAGE" rubi="トップメッセージ" isLeft={true} />
 			<div class="topMessage">
 				<div class="imgCell">
-					<img src="imageFile/contact_catch.svg" alt="" class="contactCatch">
+					<img src="/imageFile/join-us/ogose.svg" alt="XIN CEO 生越" class="contactCatch">
 				</div>
 				<div class="descCell">
-					<p class="catch">
-						オンライン無料相談を<br>
-						受け付けています。
+					<p class="lead">
+						XINでは、一緒に未来を描いていける仲間を
+						強く求めています。
 					</p>
-					<p class="copy">
+					<p class="body">
 						昨今、世界は驚くほど近くなりました。<br>
 						場所や距離を飛び越えて瞬時に繋がることができる、<br>
 						このニューノーマルの時代。<br><br>
@@ -57,46 +61,22 @@ import '../styles/css/join-us.css';
 
 		<div class="unitContent">
 			<ContentTitle title="IDEAL CANDIDATE" rubi="求める人物像" isLeft={false} />
-			<div class="topMessage">
-				<div class="descCell">
-					<p class="catch">
-						オンライン無料相談を<br>
-						受け付けています。
-					</p>
-					<p class="copy">
-						昨今、世界は驚くほど近くなりました。<br>
-						場所や距離を飛び越えて瞬時に繋がることができる、<br>
-						このニューノーマルの時代。<br><br>
-
-						"想い"のマッチングが何より重要と考えていますので、<br>
-						ご興味を持たれましたら、ぜひ一度お話させてください。<br>
-						オンラインにて無料でご相談を受け付けています。
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="unitContent">
-			<ContentTitle title="STORY" rubi="記事一覧" isLeft={true} />
-			<div class="topMessage">
-				<div class="imgCell">
-					<img src="imageFile/contact_catch.svg" alt="" class="contactCatch">
-				</div>
-				<div class="descCell">
-					<p class="catch">
-						オンライン無料相談を<br>
-						受け付けています。
-					</p>
-					<p class="copy">
-						昨今、世界は驚くほど近くなりました。<br>
-						場所や距離を飛び越えて瞬時に繋がることができる、<br>
-						このニューノーマルの時代。<br><br>
-
-						"想い"のマッチングが何より重要と考えていますので、<br>
-						ご興味を持たれましたら、ぜひ一度お話させてください。<br>
-						オンラインにて無料でご相談を受け付けています。
-					</p>
-				</div>
+			<div class="staffImage">
+				<dl class="staffImage_elem">
+					<dt class="staffImage_lead">こだわる<br />工夫する</dt>
+					<dd class="staffImage_dec">個性のあるアイデアにこだわり抜き、<br />
+						誰も取り組まないことに没頭する。</dd>
+				</dl>
+				<dl class="staffImage_elem">
+					<dt class="staffImage_lead">楽しむ<br />面白がる</dt>
+					<dd class="staffImage_dec">個性のあるアイデアにこだわり抜き、<br />
+						誰も取り組まないことに没頭する。</dd>
+				</dl>
+				<dl class="staffImage_elem">
+					<dt class="staffImage_lead">誠実である<br />チームで協業していく</dt>
+					<dd class="staffImage_dec">個性のあるアイデアにこだわり抜き、<br />
+						誰も取り組まないことに没頭する。</dd>
+				</dl>
 			</div>
 		</div>
 
@@ -145,6 +125,20 @@ import '../styles/css/join-us.css';
 						</a>
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<div class="unitContent">
+			<ContentTitle title="STORY" rubi="記事一覧" isLeft={true} />
+			<div class="storyWrap">
+				{
+					STORY_LIST.filter((story, index) => index < 3).map(story => (
+						<StoryUnit
+							thumnail={story.thumnail}
+							title={story.title}
+							url={story.url} />
+					)
+				)}
 			</div>
 		</div>
 

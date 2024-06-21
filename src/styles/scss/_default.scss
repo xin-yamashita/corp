@@ -41,6 +41,10 @@ body { --sb-track-color: #ffffff; --sb-thumb-color: #aaa; --sb-size: 16px; scrol
 	}
 }
 
+.pageWrap {
+	padding-bottom: 100px;
+}
+
 .unitContent {
 	position: relative;
 	margin: 100px auto 0;
@@ -52,6 +56,14 @@ body { --sb-track-color: #ffffff; --sb-thumb-color: #aaa; --sb-size: 16px; scrol
 		.catchUnit {
 			padding-left: 60px;
 		}
+	}
+
+	.lead {
+		font-size: clamp(20px,3vw,32px); font-weight: bold; line-height: $lh_medium; letter-spacing: $ls_small;
+	}
+	.body {
+		margin-top: 1.5em;
+		font-size: clamp(16px,1.5vw,20px); line-height: $lh_medium; letter-spacing: $ls_small;
 	}
 }
 
