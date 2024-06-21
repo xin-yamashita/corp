@@ -50,7 +50,7 @@ import '../styles/css/contactForm.css';
     <dl class={`${cn}Unit`}>
       <dt class={`${cn}Unit_label`}>電話番号</dt>
       <dd class={`${cn}Unit_inputArea`}>
-        <input type='tel' name='tel' pattern='[0-9]{3}-[0-9]{3,4}-[0-9]{4}' placeholder='090xxxxxxx' required>
+        <input type='tel' name='tel' pattern='\d{2,4}-\d{3,4}-\d{3,4}' placeholder='090xxxxxxx' required>
       </dd>
       <dd class={`${cn}Unit_inputConfirm`} data-area='tel'></dd>
     </dl>
@@ -63,7 +63,7 @@ import '../styles/css/contactForm.css';
     </dl>
     <div class={`${cn}_buttons`}>
       <button name="confirm" id="contactConfirm" class="md_btn">次へ</button>
-      <input type="submit" value="送信する" />
+      <input type="submit" value="送信する" id="contactSubmit" class="md_btn"  />
     </div>
   </form>
 </div>
@@ -101,7 +101,11 @@ import '../styles/css/contactForm.css';
   isContactConfirm.subscribe(isConfirm => {
     const inputUnits = document.querySelectorAll('.contactFormUnit_inputArea');
     const confirmUnits = document.querySelectorAll('.contactFormUnit_inputConfirm');
+    const submitBtn = document.getElementById('contactSubmit');
+    const confirmBtn = document.getElementById('contactConfirm');
     if (isConfirm) {
+      submitBtn.style.display = 'block';
+      confirmBtn.style.display = 'none';
       inputUnits.forEach((unit) => {
         unit.style.display = 'none';
       });
@@ -110,6 +114,8 @@ import '../styles/css/contactForm.css';
         unit.innerText = getInputData(unit.dataset.area);
       });
     } else {
+      submitBtn.style.display = 'none';
+      confirmBtn.style.display = 'block';
       inputUnits.forEach((unit) => {
         unit.style.display = 'block';
       });
