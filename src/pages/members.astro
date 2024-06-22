@@ -3,10 +3,11 @@ import Layout from '../layouts/PageTemplate.astro';
 import BreadCrumbs from '../components/BreadCrumbs.astro';
 import PageTitle from '../components/PageTitle.astro';
 import ContentTitle from '../components/ContentTitle.astro';
+import Catch from '../components/Catch.astro';
 
 import MemberListWrapper from '../components/MemberListWrapper.astro';
 
-import '../styles/css/join-us.css';
+import '../styles/css/member.css';
 ---
 
 <Layout title="Members" description="">
@@ -24,12 +25,12 @@ import '../styles/css/join-us.css';
 				<h2 class="rubi">私たちの<br />想い</h2>
 		</PageTitle>
 
-		<div class="unitContent spaceLess">
-			<p class="catchSet">
+		<div class="unitContent spaceLess pageTopCopy">
+			<Catch>
 				私たちはXINである以前に、ひとりひとりが個性溢れるクリエイター。<br>
 				ここに集まった個性のひとつひとつが<br>
 				XINを形作っています。
-			</p>
+			</Catch>
 		</div>
 
 		<MemberListWrapper isTop={false} />
