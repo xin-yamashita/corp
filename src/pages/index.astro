@@ -4,6 +4,9 @@ import Header from '../components/Header.astro';
 import PageTitle from '../components/PageTitle.astro';
 import MemberListWrapper from '../components/MemberListWrapper.astro';
 import Footer from '../components/Footer.astro';
+
+import MemberListTop from '../components/MemberListTop.astro';
+
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import '../styles/css/index.css';
@@ -307,7 +310,7 @@ import '../styles/css/index.css';
 		<!-- /md_contentUnit--work -->
 
 		<!-- md_contentUnit--member -->
-		<MemberListWrapper  isTop={true} />
+		<MemberListTop />
 		<!-- /md_contentUnit--member -->
 
 		<!-- md_contentUnit--value -->
