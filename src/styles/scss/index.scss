@@ -1005,7 +1005,7 @@
 	}
 	&.md_contentUnit--join {
 		&:before { top: calc(100% - 150px); right: inherit; left: 50%; width: 100vw; min-width: 1700px; background-image: url(../../imageFile/join_bg.svg); transform: translate(-50%,-50%); }
-		.unitContent {
+		.unitContent { padding-bottom: 100px;
 			.contentArea {
 				.catchSet { text-align: center; }
 				.joinSet { margin-top: 120px;
@@ -1015,6 +1015,7 @@
 				}
 			}
 		}
+    .actionSet { text-align: center; }
 		// For tablet
 		@media only screen and (max-width: 1000px) {
 			&:before { top: calc(100% - 80px); min-width: 1200px; }
