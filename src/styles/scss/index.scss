@@ -35,6 +35,10 @@
 			.bgImg { position: absolute; } 
 		}
 	}
+  .moreArea {
+    margin-top: 100px;
+    text-align: center;
+  }
 	// For SP
 	@media only screen and (max-width: $w_break_sp) { width: calc(100vw - 80px); }
 	.unitTitle { position: relative; display: flex;  padding: 0 40px;
@@ -762,7 +766,7 @@
 		}
 	}
 	&.md_contentUnit--member {
-		&:before { top: calc(100% + 360px); right: inherit; left: 50%; width: 100vw; min-width: 1700px; background-image: url(../../imageFile/member_bg.svg); transform: translate(-50%,-100%); }
+		&:before { display: none; }
 		.unitContent {
 			.contentArea {
 				.catchSet {}
@@ -1703,4 +1707,11 @@
       background-color: #000;
     }
   }
+}
+
+.memberSwiper  {
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+  &:before { content: ''; display: inline-block; position: absolute; top: 80%; right: inherit; left: 50%; width: 100vw; min-width: 1700px; height: 100%; background: url(/imageFile/member_bg.svg) no-repeat center center; background-size: contain; transform: translate(-50%,-100%); }
 }
