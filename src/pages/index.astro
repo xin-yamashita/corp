@@ -5,6 +5,8 @@ import PageTitle from '../components/PageTitle.astro';
 import MemberListWrapper from '../components/MemberListWrapper.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import '../styles/css/index.css';
 ---
 
 <!DOCTYPE html>
@@ -354,33 +356,60 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			</div>
 			<div class="unitContent">
 				<div class="contentArea">
-					<div class="catchSet">
-						経営ビジョンやパーパスの策定、事業成長や改善戦略、新サービス立ち上げなど、<br>
-						ビジネスに関するさまざまなお悩みに、弊社デザインストラテジストが対応いたします。<br><br>
-						どんなプロジェクトも、はじまりは人と人との出会いから。<br class="spHide">
-						まずはお話から、お気軽にお問い合わせください。
-					</div>
 					<div class="contactSet">
 						<div class="imgCell">
 							<img src="imageFile/contact_catch.svg" alt="" class="contactCatch">
 						</div>
-						<div class="descCell">
-							<p class="catch">
-								オンライン無料相談を<br>
-								受け付けています。
-							</p>
-							<p class="copy">
-								昨今、世界は驚くほど近くなりました。<br>
-								場所や距離を飛び越えて瞬時に繋がることができる、<br>
-								このニューノーマルの時代。<br><br>
-
-								"想い"のマッチングが何より重要と考えていますので、<br>
-								ご興味を持たれましたら、ぜひ一度お話させてください。<br>
-								オンラインにて無料でご相談を受け付けています。
-							</p>
+						<div class="catchSet">
+							経営ビジョンやパーパスの策定、事業成長や改善戦略、新サービス立ち上げなど、<br>
+							ビジネスに関するさまざまなお悩みに、弊社デザインストラテジストが対応いたします。<br><br>
+							どんなプロジェクトも、はじまりは人と人との出会いから。<br class="spHide">
+							まずはお話から、お気軽にお問い合わせください。
 						</div>
 					</div>
+				</div>
+			</div>
+			<div class="unitContent">
+				<div class="contentArea">
+					<div class="clientProblemWrap">
+						<p class="clientProblem_catch">こんなお悩みはありませんか？</p>
+						<div class="clientProblem_inner">
+							<dl class="clientProblem">
+								<dt class="clientProblem_target">自社サービスをお持ちの方</dt>
+								<dd class="clientProblem_problems">
+									<ul class="clientProblem_list">
+										<li class="clientProblem_elem">グロース施策だけでは成長に限界が来ており、大きな変革が必要</li>
+										<li class="clientProblem_elem">インハウスデザイナーはいるが、通常業務が忙しく対応に手が回らない</li>
+										<li class="clientProblem_elem">部門ごとに課題が分散しており、組織を横断しての対応が必要...</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="clientProblem">
+								<dt class="clientProblem_target">サービスを育てたい<br />スタートアップの方</dt>
+								<dd class="clientProblem_problems">
+									<ul class="clientProblem_list">
+										<li class="clientProblem_elem">インハウスデザイナーがおらず、目の前の開発が進まない...</li>
+										<li class="clientProblem_elem">インハウスデザイナーはいるが、経験や知見が不足しており対応が難しい...</li>
+										<li class="clientProblem_elem">サービスデザインの知見が少なく、プロジェクトを推進できない....</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="clientProblem">
+								<dt class="clientProblem_target">コンサル会社 / 開発会社の方</dt>
+								<dd class="clientProblem_problems">
+									<ul class="clientProblem_list">
+										<li class="clientProblem_elem">社内にデザイナーがおらず、ニーズに応えられない...</li>
+										<li class="clientProblem_elem">エンジニア観点だけでなく、UX/UI観点を加えた提案をしたい...</li>
+										<li class="clientProblem_elem">システムとの連携を前提にしたデザインができるデザイナーがいない..</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+
 					<div class="actionSet">
+						<p class="clientProblem_btnCatch">ご興味を持たれましたら、ぜひ一度お話させてください。<br />
+							オンラインにて無料でご相談を受け付けています。</p>
 						<a href="https://forms.gle/TVyWZC1J5o1qCSxz8" target="_blank" class="md_btn md_btn--big md_btn--contact">お問い合わせフォーム</a>
 					</div>
 				</div>
@@ -416,6 +445,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						</div>
 					</div>
 				</div>
+			</div>
+
+			<div class="actionSet">
+				<a href="/join-us" target="_blank" class="md_btn md_btn--big md_btn--contact">採用情報へ</a>
 			</div>
 		</div>
 		<!-- /md_contentUnit--join -->
