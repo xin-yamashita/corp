@@ -1,12 +1,12 @@
 ---
 const { title, rubi, isLeft } = Astro.props;
-const rubiClass = isLeft ? 'rubi rubi--left' : 'rubi rubi--right';
+const titleClass = isLeft ? 'titleSet title--left' : 'titleSet title--right';
 ---
 
 <div class="unitTitle">
-  <div class="titleSet">
+  <div class={titleClass}>
     <div class="title">{title}</div>
-    <h3 class={rubiClass}>{rubi}</h3>
+    <h3 class="rubi">{rubi}</h3>
   </div>
 </div>
 
