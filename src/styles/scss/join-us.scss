@@ -11,8 +11,9 @@
 /*----------------------------------------
  join-us
 ----------------------------------------*/
-.topMessage { display: grid; grid-template-columns: 40% 52%; gap: 8%;
-  background: url(/imageFile/join-us/ogose_bkg.svg) no-repeat left -40px center;
+.topMessage { display: grid; grid-template-columns: 40% 52%; gap: 8%; margin: 100px 0;
+  /*
+  &:before { content: ''; display: inline-block; position: absolute; top: 0; right: inherit; left: 50%; width: 50vw; min-width: 1000px; height: 100%; background-image: url(../../imageFile/join-us/top_message_bg.svg); transform: translate(-50%,-50%); }*/
   .imgCell { display: flex; align-items: center; justify-content: center; width: 100%; }
 }
 
