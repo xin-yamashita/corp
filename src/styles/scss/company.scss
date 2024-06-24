@@ -12,7 +12,7 @@
  About
 ----------------------------------------*/
 
-.contentArea { margin: 130px auto 0;  max-width: 1300px; width: calc(100vw - 200px); 
+.contentArea { margin: 130px auto 0; padding: 0 40px;  max-width: 1300px; width: calc(100vw - 200px); 
   .descriptionSet { display: flex;
     .description { display: flex; flex-wrap: wrap;  width: 50%; height: fit-content;
       .item, .data { font-size: clamp(16px,1.3vw,20px) ; line-height: $lh_medium; }
@@ -26,111 +26,6 @@
       }
       &--left {margin-right: 80px;}
     }
-  }
-  .newsSet { margin-top: 80px;
-    .setContent { margin-top: 40px; padding-left: 30px;
-      .newsList {
-        .news { display: flex; padding: 40px 20px 40px 0px; color: $col_txt_link_black;
-          .date, .title { }
-          .date { display: inline-block; padding-top: 10px; width: 135px; font-size: 20px; font-weight: 500; letter-spacing: .1em; font-style: italic; }
-          .title { padding-left: 160px; width: calc(100% - 80px); font-size: 20px; line-height: $lh_medium; }
-          & + .news { border-top: 2px solid #323232; }
-          &:hover { opacity: $col_opacity; }
-        }
-        
-        &--hide { position: relative; height: 0; overflow: hidden; @include transition;
-          &.active { margin-top: 20px; height: auto; overflow: visible; @include transition; }
-        }
-      }
-    }
-    .actionSet { margin-top: 40px; text-align: center; 
-      .moreLink { display: inline-block;
-        .label { font-size: 20px; font-weight: 600;
-          &:after { content: "\ea18"; @include icon; display: block; margin-top: 5px; font-size: 30px; }
-        }
-        &:hover { opacity: $col_opacity; }
-        &--back {
-          .label {
-            &:after { transform: scale(1,-1); }
-          }
-        }
-      }
-    }
-  }
-  .historySet { margin-top: 80px;
-    .setContent { margin-top: 40px; padding-left: 30px;
-      .historyList {
-        .history { display: flex;
-          .year, .desc { }
-          .year { display: inline-block; padding-top: 5px; width: 80px; font-size: 20px; font-weight: 500; letter-spacing: .1em; font-style: italic; }
-          .desc { padding-left: 30px; width: calc(100% - 80px); font-size: 16px; line-height: $lh_medium; }
-          & + .history { margin-top: 20px; }
-        }
-        &--hide { position: relative; height: 0; overflow: hidden; @include transition;
-          &.active { margin-top: 20px; height: auto; overflow: visible; @include transition; }
-        }
-      }
-    }
-    /*
-    .actionSet { margin-top: 40px; text-align: center;
-      .moreLink { display: inline-block;
-        .label { font-size: 20px; font-weight: 600; color: $col_txt_gray;
-          &:after { content: "\ea18"; @include icon; display: block; margin-top: 5px; font-size: 30px; }
-        }
-        &:hover { opacity: $col_opacity; }
-        &--back {
-          .label {
-            &:after { transform: scale(1,-1); }
-          }
-        }
-      }
-    }
-    */
-  }
-  .groupSet { margin-top: 80px;
-    .setContent { margin-top: 40px; padding-left: 30px;
-      .subTitle { font-size: 20px; }
-      .companySet { display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 100px;
-        .mainCompany { 
-          .company { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; width: 224px; height: 150px; text-align: center;
-            .imgCell { display: flex; justify-content: center; align-items: center; height: 66px;
-              .logoImg { width: 70%; }
-            }
-            .captionCell { display: flex; align-items: center; height: 44px;
-              .caption { text-align: center; font-size: 14px; line-height: normal;}
-            }	
-            &#agexGroup { img{ width: 90%; } }
-          }
-        }
-        .otherCompany { display: flex; flex-direction: row;
-          .company { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; width: 224px; height: 150px; text-align: center; border-left: 1px solid rgba($color: #fff, $alpha: 0.2); 
-            .imgCell { display: flex; justify-content: center; align-items: center; height: 66px;
-              .logoImg { width: 70%; }
-            }
-            .captionCell { display: flex; align-items: center; height: 44px;
-              .caption { text-align: center; font-size: 14px; line-height: normal; color: $col_txt_link_black; }
-            }
-            &#DS { img{ width: 82%; } }
-            &#XIN { img{ width: 64%; } }
-            &#SK { img{ width: 88%; } }
-            &#fft { img{ width: 76%; } } 
-
-            @media only screen and (max-width: $w_break_sp){
-              &#agexGroup { img {width: 60%;} }
-              &#DS { img {width: 60%;} }
-              &#XIN { img {width: 50%;} }
-              &#SK { img {width: 70%;} }
-              &#fft { img {width: 60%;} }
-            }
-            
-          }
-        }
-        
-
-
-      }
-    }
-    
   }
   // For tablet
   @media only screen and (max-width: 1000px) { margin: 60px auto 0;
@@ -322,4 +217,110 @@
       
     }		
   }	
+}
+
+.newsSet { margin-top: 80px;
+  .setContent { margin-top: 40px; padding-left: 30px;
+    .newsList {
+      .news { display: flex; padding: 40px 20px 40px 0px; color: $col_txt_link_black;
+        .date, .title { }
+        .date { display: inline-block; padding-top: 10px; width: 135px; font-size: 20px; font-weight: 500; letter-spacing: .1em; font-style: italic; }
+        .title { padding-left: 160px; width: calc(100% - 80px); font-size: 20px; line-height: $lh_medium; }
+        & + .news { border-top: 2px solid #323232; }
+        &:hover { opacity: $col_opacity; }
+      }
+      
+      &--hide { position: relative; height: 0; overflow: hidden; @include transition;
+        &.active { margin-top: 20px; height: auto; overflow: visible; @include transition; }
+      }
+    }
+  }
+  .actionSet { margin-top: 40px; text-align: center; 
+    .moreLink { display: inline-block;
+      .label { font-size: 20px; font-weight: 600;
+        &:after { content: "\ea18"; @include icon; display: block; margin-top: 5px; font-size: 30px; }
+      }
+      &:hover { opacity: $col_opacity; }
+      &--back {
+        .label {
+          &:after { transform: scale(1,-1); }
+        }
+      }
+    }
+  }
+}
+.historySet { margin-top: 80px;
+  .setContent { margin-top: 40px; padding-left: 30px;
+    .historyList {
+      .history { display: flex;
+        .year, .desc { }
+        .year { display: inline-block; padding-top: 5px; width: 80px; font-size: 20px; font-weight: 500; letter-spacing: .1em; font-style: italic; }
+        .desc { padding-left: 30px; width: calc(100% - 80px); font-size: 16px; line-height: $lh_medium; }
+        & + .history { margin-top: 20px; }
+      }
+      &--hide { position: relative; height: 0; overflow: hidden; @include transition;
+        &.active { margin-top: 20px; height: auto; overflow: visible; @include transition; }
+      }
+    }
+  }
+  /*
+  .actionSet { margin-top: 40px; text-align: center;
+    .moreLink { display: inline-block;
+      .label { font-size: 20px; font-weight: 600; color: $col_txt_gray;
+        &:after { content: "\ea18"; @include icon; display: block; margin-top: 5px; font-size: 30px; }
+      }
+      &:hover { opacity: $col_opacity; }
+      &--back {
+        .label {
+          &:after { transform: scale(1,-1); }
+        }
+      }
+    }
+  }
+  */
+}
+.groupSet { margin-top: 80px;
+  .setContent { margin-top: 40px; padding-left: 30px;
+    .subTitle { font-size: 20px; }
+    .companySet { display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 100px;
+      .mainCompany { 
+        .company { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; width: 224px; height: 150px; text-align: center;
+          .imgCell { display: flex; justify-content: center; align-items: center; height: 66px;
+            .logoImg { width: 70%; }
+          }
+          .captionCell { display: flex; align-items: center; height: 44px;
+            .caption { text-align: center; font-size: 14px; line-height: normal;}
+          }	
+          &#agexGroup { img{ width: 90%; } }
+        }
+      }
+      .otherCompany { display: flex; flex-direction: row;
+        .company { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; width: 224px; height: 150px; text-align: center; border-left: 1px solid rgba($color: #fff, $alpha: 0.2); 
+          .imgCell { display: flex; justify-content: center; align-items: center; height: 66px;
+            .logoImg { width: 70%; }
+          }
+          .captionCell { display: flex; align-items: center; height: 44px;
+            .caption { text-align: center; font-size: 14px; line-height: normal; color: $col_txt_link_black; }
+          }
+          &#DS { img{ width: 82%; } }
+          &#XIN { img{ width: 64%; } }
+          &#SK { img{ width: 88%; } }
+          &#fft { img{ width: 76%; } } 
+
+          @media only screen and (max-width: $w_break_sp){
+            &#agexGroup { img {width: 60%;} }
+            &#DS { img {width: 60%;} }
+            &#XIN { img {width: 50%;} }
+            &#SK { img {width: 70%;} }
+            &#fft { img {width: 60%;} }
+          }
+          
+        }
+      }
+      
+
+
+    }
+  }
+  
 }
