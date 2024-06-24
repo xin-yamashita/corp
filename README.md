@@ -50,50 +50,54 @@ All commands are run from the root of the project, from a terminal:
 - CSS はファイル内にも記述可能だし、ファイルでの読み込みも可能
 
 ```javascript
+// src/pages/member.astro
 ---
-import { Members } from '../content/Members.js';
-import MemberList from '../components/MemberList.astro';
-import MemberModal from '../components/MemberModal.astro';
+import Layout from '../layouts/PageTemplate.astro';
+import BreadCrumbs from '../components/BreadCrumbs.astro';
+import PageTitle from '../components/PageTitle.astro';
 import ContentTitle from '../components/ContentTitle.astro';
-import SwiperMembers from './SwiperMembers.astro';
+import Catch from '../components/Catch.astro';
 
-const memberSetClass = 'memberSet js_slick hidden';
+import MemberListWrapper from '../components/MemberListWrapper.astro';
 
-import '../styles/css/modal.css';
+import '../styles/css/member.css';
 ---
 
-<div id="members" class="md_contentUnit md_contentUnit--category md_contentUnit--member js_animeReveal07">
-  <div class="unitTitle unitTitle--category">
-    <div class="titleSet">
-      <div class="subTitle">WHO WE ARE</div>
-      <div class="title">
-        <img src="imageFile/member_title.svg" alt="member" class="titleImg">
-        <img src="imageFile/member_title.svg" alt="member" class="titleImg">
-      </div>
-      <h2 class="rubi">
-        私たちの<br>
-        想い
-      </h2>
-    </div>
-  </div>
-  <div class="unitContent">
-    <div class="contentArea">
-      <p class="catchSet">
-        私たちはXINである以前に、ひとりひとりが個性溢れるクリエイター。<br>
-        ここに集まった個性のひとつひとつが<br>
-        XINを形作っています。
-      </p>
-    </div>
-  </div>
-</div>
-<div class="memberSwiper">
-  <SwiperMembers members={Members} />
-</div>
+<Layout title="Members" description="">
+	<div id="members" class="md_contentUnit">
+		<BreadCrumbs
+      pages={[
+        {name: 'TOP', url: '/'},
+        {name: 'MEMBERS', url: '/members'},
+      ]}
+      />
+
+		<PageTitle
+				subTitle="WHO WE ARE"
+				svg="/imageFile/member_title.svg">
+				<h2 class="rubi">私たちの<br />想い</h2>
+		</PageTitle>
+
+		<div class="unitContent spaceLess pageTopCopy">
+			<Catch>
+				私たちはXINである以前に、ひとりひとりが個性溢れるクリエイター。<br>
+				ここに集まった個性のひとつひとつが<br>
+				XINを形作っています。
+			</Catch>
+		</div>
+
+		<MemberListWrapper isTop={false} />
+
+	</div>
+</Layout>
 ```
 
 - 繰り返しの処理により、データとデザイン・テンプレートを分離しやすい
+- HTML内で JS の変数使うところは `{}` でくくる
+  - Attribute に JS の値を渡す場合も同様 `=""` ではなく `={}`
 
 ```javascript
+// src/components/MemberListWrapper.astro
 ---
 import { Members } from '../content/Members.js';
 import MemberList from '../components/MemberList.astro';
@@ -132,5 +136,6 @@ import '../styles/css/modal.css';
 ```
 
 
+## その他 ドキュメントなど
  - [Astro 公式ドキュメント 日本語](https://docs.astro.build/ja/getting-started/)
  - [AstroでSwiperを使用する](https://zenn.dev/h_ymt/articles/cde09dc1749a2c)
