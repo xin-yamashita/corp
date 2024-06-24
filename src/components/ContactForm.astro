@@ -6,7 +6,11 @@ import '../styles/css/contactForm.css';
 ---
 
 <div class={`${cn}`}>
-  <form netlify>
+  <form
+    name="contact"
+    method="POST"
+    action="/contact-send"
+    data-netlify="true">
     
     <dl class={`${cn}Unit`}>
       <dt class={`${cn}Unit_label`}>お問い合わせ種別</dt>
@@ -73,6 +77,7 @@ import '../styles/css/contactForm.css';
 
   document.getElementById('contactConfirm').addEventListener('click', () => {
     isContactConfirm.set(true);
+    return false;
   });
 
   function getInputData(name){
